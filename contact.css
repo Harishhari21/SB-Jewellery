@@ -1,0 +1,599 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  /*------------------contuct navbar starts--------*/
+  
+
+
+
+  nav{
+    height: 80px;
+    width: auto;
+    background: whitesmoke;
+    border-bottom: 1px solid gray;
+  }
+  
+  
+  nav img{
+    width: 175px;
+    position: absolute;
+    top: 17px;
+    left: 5%;
+  }
+  
+  
+  nav ul{
+    float: right;
+    margin-left: 25px;
+  }
+  
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+  }
+  
+  
+  nav ul li a{
+    position: relative;
+    color: black;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+  }
+  
+  nav ul li a:hover{
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: rgb(255, 188, 106);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  
+  nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  #btn, #cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 40px;
+    margin-right: 10px;
+    display: none;
+  }
+  
+  .active {
+    all: unset;
+    padding: 14px 22px;
+    border-radius: 4px;
+    background-color: rgb(255, 188, 106);
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  
+  #check{
+    display: none;
+  }
+  
+  @media (max-width: 1118px) {
+    nav img{
+      left: 3%;
+    }
+  }
+  
+  
+  @media (max-width: 944px) {
+    nav img{
+      left: 2%;
+      top: 15px;
+      width: 175px;
+    }
+  
+    nav ul li a{
+      font-size: 14px;
+    }
+  }
+  
+  
+  @media (max-width: 860px) {
+    #btn{
+      display: block;
+    }
+    
+  
+    ul{
+      position: fixed;
+      width: 60%;
+      height: 100vh;
+      background: whitesmoke;
+      top: 80px;
+      right: -300%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 2;
+    }
+  
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    nav ul li a{
+      font-size: 20px;
+      padding: 20px 16px;
+    }
+  
+    .active {
+      all: unset;
+      padding: 20px 60px;
+      background-color: rgb(255, 188, 106);
+      text-transform: uppercase;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  
+    #check:checked ~ ul{
+      right: 0;
+    }
+  
+    #check:checked ~ label #btn{
+      display: none;
+    }
+  
+    #check:checked ~ label #cancel{
+      display: block;
+    }
+  
+  }
+
+  
+  /*-------------contuct navbar ends---------------*/
+
+
+    /*---------------blogs banner section starts-----------*/
+
+.contact-banner-section {
+  background-image: url("https://www.candere.com/media/wysiwyg/contact_us/contact_us_banner_220424.jpg");
+  min-height: 40vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 50px;
+  margin-top: 80px;
+  background-position: 75%;
+}
+
+
+.contact-banner-section-content {
+  display: block;
+  margin: 0 auto;
+}
+
+.contact-banner-section-content h3 {
+  font-family: "Abril Fatface", serif;
+  font-size: 34px;
+  color: rgb(255, 173, 72);
+  text-align: left;
+  margin-top: 100px;
+  margin-left: 10px;
+}
+
+.contact-banner-section-content p {
+  font-family: initial;
+  font-size: 26px;
+  color: #111;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+
+
+@media (max-width: 992px) {
+  .contact-banner-section {
+    min-height: 35vh;
+    width: 100%;
+    background-position: 75%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .contact-banner-section {
+    min-height: 30vh;
+    width: 100%;
+    background-position: 75%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .contact-banner-section {
+    min-height: 25vh;
+    width: 100%;
+    background-position: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-banner-section {
+    min-height: 25vh;
+    width: 100%;
+    background-position: 75%;
+  }
+
+  .contact-banner-section-content h3 {
+    font-family: "Abril Fatface", serif;
+    font-size: 28px;
+    color: rgb(255, 173, 72);
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 10px;
+  }
+  
+  .contact-banner-section-content p {
+    font-family: initial;
+    font-size: 22px;
+    color: #111;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+}
+
+/*---------------blogs  banner section ends-----------*/
+
+
+/*-----------------help & contact section starts--------------*/
+
+.help-contact-section-heading {
+  margin-top: 50px;
+}
+
+.help-contact-section-heading h1 {
+  font-size: 36px;
+  font-family: "Abril Fatface", serif;
+  color: rgb(255, 173, 72);
+  text-align: center;
+}
+
+.help-contact-section-heading p {
+  font-size: 16px;
+  text-align: center;
+  font-family: initial;
+  color: #111;
+}
+
+
+.contact-details-container {
+  height: 250px;
+  width: 250px;
+  border: 1px solid rgb(221, 220, 220);
+  border-collapse: separate;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgb(202, 202, 201);
+  transition: all 0.6s;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.contact-details-container:hover{
+  box-shadow: 0 0 40px rgb(255, 173, 72);
+}
+
+.card-image {
+  margin-left: 35%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.card-phone {
+  color: rgb(0, 174, 255);
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card-deteails {
+  text-align: center;
+  font-size: 14px;
+  color: #111;
+}
+
+.card-description {
+  text-align: center;
+  font-size: 16px;
+  color: #111;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .contact-details-container {
+    height: auto;
+    width: 220px;
+  }
+
+  .card-image {
+    height: 50px;
+    width: auto;
+  }
+  
+  .card-phone {
+    font-size: 20px;
+  }
+
+  .card-deteails{
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .card-description{
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 980px) {
+  .contact-details-container {
+    height: auto;
+    width: 350px;
+  }
+  .card-image {
+    margin-left: 43%;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact-details-container {
+    height: auto;
+    width: 230px;
+  }
+  .card-image {
+    margin-left: 35%;
+  }
+}
+
+
+
+@media (max-width: 568px) {
+  .contact-details-container {
+    height: auto;
+    width: 350px;
+  }
+  .card-image {
+    margin-left: 43%;
+  }
+}
+
+
+@media (max-width: 350px) {
+  .contact-details-container {
+    height: auto;
+    width: 300px;
+  }
+  .card-image {
+    margin-left: 43%;
+  }
+}
+
+.working-hours-section {
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.working-hours-section p{
+  font-size: 24px;
+  font-family: initial;
+  color: #111;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+/*-----------------help & contact section ends--------------*/
+
+/*-----------------maps section starts-------------------------*/
+
+.total-maps-container {
+  background-color: #f9f9f9;
+  margin-top: 10px;
+}
+
+.address-container {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.address-container h1 {
+  font-size: 26px;
+  color: #111;
+  font-family: initial;
+  justify-content: center;
+}
+
+.address-container p {
+  color: #111;
+  font-size: 16px;
+  font-family: initial;
+  justify-content: center;
+}
+
+.maps-image-container img {
+  height: 200px;
+  width: 700px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+@media (max-width: 1200px) {
+  .maps-image-container img {
+    width: 600px;
+  }
+}
+
+@media (max-width: 800px) {
+  .maps-image-container img {
+    width: 500px;
+  }
+}
+
+@media (max-width: 700px) {
+  .maps-image-container img {
+    width: 450px;
+  }
+}
+
+@media (max-width: 568px) {
+  .maps-image-container img {
+    width: 300px;
+  }
+}
+/*-----------------maps section starts-------------------------*/
+
+/*-----------------login section starts--------------------------*/
+
+
+.login-section {
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.login-section h1 {
+  font-size: 18px;
+  font-family: initial;
+  font-weight: 200;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.login-inputs {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.login-inputs input {
+  background-color: aliceblue;
+  border: 1px solid gray;
+  border-radius: 6px;
+  height: 40px;
+  width: 150px;
+  font-size: 12px;
+  padding-left: 2px;
+  margin-right: 5px;
+}
+
+.login-inputs button {
+  color: black;
+  background-color: rgb(255, 173, 72);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 22px;
+  transition: all 0.6s;
+}
+
+.login-inputs button:hover {
+  background-color: transparent;
+  border: #111 1px solid;
+  border-color: rgb(255, 173, 72);
+}
+
+@media (max-width: 560px) {
+  .login-inputs button {
+    margin-top: 5px;
+  }
+}
+
+/*-----------------login section ends--------------------------*/
+
+/*----------about us bottom section starts-----------*/
+
+.about-bottom-section {
+  background-color: #111;
+}
+
+.about-bottom-section-description {
+  color: whites;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+
+.about-bottom-section-description h3 {
+  font-family: "Abril Fatface", serif;
+  color: #ffffff;
+  font-size: 32px;
+  display: block;
+}
+
+
+.about-bottom-section-description p {
+  color: #ffffff;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: inherit;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+
+.about-bottom-section-icons {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.about-bottom-section-icons i {
+  color: #ffffff;
+  margin: 15px;
+  font-size: 22px;
+  padding-top: 15px;
+  transition: all o.6s;
+}
+
+
+.about-bottom-section-icons i:hover{
+  color: rgb(255, 174, 0);
+}
+
+.about-mail{
+  color: white;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+
+/*----------about us bottom section ends-----------*/

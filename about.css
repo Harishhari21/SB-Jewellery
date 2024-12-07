@@ -1,0 +1,883 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+html, body {
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
+}
+
+  /*-------------------------navbar starts-------------------*/
+
+
+  nav{
+    height: 80px;
+    width: auto;
+    background: whitesmoke;
+    border-bottom: 1px solid gray;
+  }
+  
+  
+  nav img{
+    width: 175px;
+    position: absolute;
+    top: 17px;
+    left: 5%;
+  }
+  
+  
+  nav ul{
+    float: right;
+    margin-left: 25px;
+  }
+  
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+  }
+  
+  
+  nav ul li a{
+    position: relative;
+    color: black;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+  }
+  
+  nav ul li a:hover{
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: rgb(255, 188, 106);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  
+  nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  #btn, #cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 40px;
+    margin-right: 10px;
+    display: none;
+  }
+  
+  .active {
+    all: unset;
+    padding: 14px 22px;
+    border-radius: 4px;
+    background-color: rgb(255, 188, 106);
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  
+  #check{
+    display: none;
+  }
+  
+  @media (max-width: 1118px) {
+    nav img{
+      left: 3%;
+    }
+  }
+  
+  
+  @media (max-width: 944px) {
+    nav img{
+      left: 2%;
+      top: 15px;
+      width: 175px;
+    }
+  
+    nav ul li a{
+      font-size: 14px;
+    }
+  }
+  
+  
+  @media (max-width: 860px) {
+    #btn{
+      display: block;
+    }
+    
+  
+    ul{
+      position: fixed;
+      width: 60%;
+      height: 100vh;
+      background: whitesmoke;
+      top: 80px;
+      right: -300%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 2;
+    }
+  
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+  
+    nav ul li a{
+      font-size: 20px;
+      padding: 20px 16px;
+    }
+  
+    .active {
+      all: unset;
+      padding: 20px 60px;
+      background-color: rgb(255, 188, 106);
+      text-transform: uppercase;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  
+    #check:checked ~ ul{
+      right: 0;
+    }
+  
+    #check:checked ~ label #btn{
+      display: none;
+    }
+  
+    #check:checked ~ label #cancel{
+      display: block;
+    }
+  
+  }
+  
+  /*-------------navbar ends---------------*/
+
+
+
+  /*---------------about us banner section staarts-----------*/
+
+.about-banner-section {
+  background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("https://img.freepik.com/free-photo/bride-lies-her-hand-groom-s-one_8353-388.jpg?ga=GA1.1.216234159.1699666759&semt=ais_hybrid");
+  min-height: 40vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 50px;
+  margin-top: 80px;
+}
+
+
+.about-banner-secton-content {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.about-banner-secton-content h3{
+    color: white;
+    font-family: "Abril Fatface", serif;
+    font-size: 36px;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.about-banner-secton-content p {
+    color: rgba(230, 230, 230, 0.884);
+    font-family: "Abril Fatface", serif;
+    font-size: 26px;
+    justify-content: center;
+    display: flex;
+}
+
+.about-banner-secton-content p span {
+  color: #fff;
+}
+
+.about-to-home {
+  text-decoration: none;
+  color: #b2bcd1;
+}
+
+.about-to-home:hover {
+  text-decoration: none;
+  color: rgb(255, 188, 106);
+}
+
+
+@media (max-width: 992px) {
+  .about-banner-section {
+    min-height: 35vh;
+    width: 100%;
+  }
+
+  .about-banner-secton-content {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about-banner-secton-content h3 {
+    margin-top: 30px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about-banner-section {
+    min-height: 30vh;
+    width: 100%;
+  }
+
+  .about-banner-secton-content {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about-banner-secton-content h3 {
+    margin-top: 25px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .about-banner-section {
+    min-height: 25vh;
+    width: 100%;
+  }
+
+  .about-banner-secton-content {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about-banner-secton-content h3 {
+    margin-top: 10px;
+    font-size: 32px;
+  }
+
+  .about-banner-secton-content p {
+    font-size: 22px;
+  }
+}
+
+
+/*---------------about us banner section ends-----------*/
+ 
+/*----------------few words  section starts-----------*/
+
+.few-words-section {
+  justify-content: start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.few-words-image img{
+  height: auto;
+  width: 500px;
+  padding: 15px 10px;
+}
+
+.few-words-content {
+  margin-top: 50px;
+  justify-content: center;
+  margin: auto;
+}
+
+.few-words-content h2 {
+  font-size: 36px;
+  font-family: "Abril Fatface", serif;
+  text-align: center;
+  color: #111;
+}
+
+
+
+.few-words-content-headings {
+  font-size: 28px;
+  color: gray;
+}
+
+.span-head{
+  color: rgb(255, 188, 106);
+}
+
+
+.few-words-content-description {
+  color: #111;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+
+
+.few-words-content-readmore-btn {
+  color: #fff;
+  background-color: #fd7e14;
+  border: 1px solid #fd7e14;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 15px 40px;
+  border: none;
+  margin: 15px;
+  transition: all 0.6s;
+}
+
+
+.few-words-content-readmore-btn:hover {
+  background-color: #111;
+  color: #fff;
+  border: 1px solid gray;
+}
+
+.few-words-content-contactus-btn {
+  color: #111;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 15px 40px;
+  border: 1px solid black;
+  margin: 15px;
+  transition: all 0.6s;
+}
+
+
+.few-words-content-contactus-btn:hover {
+  border: 1px solid #fd7e14;
+  color: #fd7e14;
+}
+
+@media(max-width: 1200px) {
+
+  .few-words-content {
+    margin-top: 10px;
+  }
+
+  .few-words-content h2 {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+
+  .few-words-content-headings {
+    font-size: 24px;
+    color: gray;
+  }
+
+  .few-words-content-description {
+    color: #111;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .few-words-content-readmore-btn {
+    color: #fff;
+    background-color: #fd7e14;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px 30px;
+    border: none;
+    margin: 15px;
+  }
+
+  .few-words-content-contactus-btn {
+    color: #111;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px 30px;
+    border: 1px solid black;
+    margin: 15px;
+  }
+}
+
+
+ 
+@media (max-width: 992px) {
+  .few-words-image {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .few-words-content {
+    margin-top: 10px;
+  }
+
+  .few-words-content h2 {
+    font-size: 36px;
+  }
+
+  .few-words-content-headings {
+    font-size: 24px;
+    color: gray;
+  }
+
+  .few-words-content-description {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .few-words-image {
+    display: block;
+    text-align: center;
+  }
+
+  .few-words-image img{
+    height: auto;
+    width: 500px;
+    padding: 15px 10px;
+  }
+
+    
+  .few-words-content {
+    margin-top: 10px;
+  }
+
+  .few-words-content h2 {
+    font-size: 30px;
+  }
+
+  .few-words-content-headings {
+    font-size: 26px;
+  }
+
+  .few-words-content-description {
+    text-align: center;
+  }
+
+  .few-words-content-description {
+    font-size: 18px;
+  }
+
+  .few-words-content-readmore-btn {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px 34px;
+  }
+
+  .few-words-content-contactus-btn {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px 34px;
+  }
+}
+
+@media (max-width: 486px) {
+  .few-words-image {
+    display: block;
+    text-align: center;
+  }
+
+  .few-words-image img{
+    height: auto;
+    width: 300px;
+    padding: 15px 10px;
+  }
+
+    
+  .few-words-content {
+    margin-top: 10px;
+  }
+
+  .few-words-content h2 {
+    font-size: 26px;
+  }
+
+  .few-words-content-headings {
+    font-size: 22px;
+  }
+
+  .few-words-content-description {
+    text-align: center;
+  }
+
+  .few-words-content-description {
+    font-size: 16px;
+  }
+
+  .few-words-content-readmore-btn {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 30px;
+  }
+
+  .few-words-content-contactus-btn {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 30px;
+  }
+}
+
+
+
+
+
+
+/*----------------few words  section starts-----------*/
+
+/*---------------about us our history section starts-----------*/
+
+.our-history-section {
+  background-color: #fff;
+  align-items: center;
+}
+
+
+.our-history-heading {
+  font-size: 36px;
+  font-family: "Abril Fatface", serif;
+  text-align: center;
+  color: #111;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.history-image-heading {
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+
+.history-images-year {
+  font-size: 14px;
+  color: #fd7e14;
+  padding-top: 3px;
+}
+
+
+.our-history-card {
+  width: 230px;
+  height: 230px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 100px;
+}
+
+.our-history-card:hover {
+  box-shadow: 0 0 20px 0px rgb(255, 191, 53);
+  border: 1px solid gray;
+  background-color: #ffffff;
+}
+
+
+.our-history-card .our-history-image-container {
+  width: 230px;
+  height: 230px;
+  border-radius: inherit;
+}
+
+.our-history-card .our-history-image-container img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: 0.5s ease-in-out;
+}
+
+
+.our-history-details {
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+  padding-top: 100px;
+  font-size: 12xp;
+}
+
+
+.our-history-details i{
+  font-size: 42px;
+}
+
+
+.our-history-details i:hover {
+  color: rgb(255, 191, 53);
+}
+
+
+.our-history-details p {
+  font-size: 42px;
+  font-family: sans-serif;
+}
+
+
+
+.our-history-image-container:hover + .our-history-details{
+  opacity: 1;
+}
+
+.new-collection-product-card:hover +.our-history-details{
+  opacity: 1;
+}
+
+.our-history-details:hover{
+  opacity: 1;
+}
+
+@media (max-width: 786px) {
+  .our-history-card-section {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 712px) {
+  .our-history-card-section {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 580px) {
+  .our-history-card {
+    width: 280px;
+    height: 280px;
+  }
+
+  .our-history-card .our-history-image-container {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .our-history-card .our-history-image-container img {
+    width: 280px;
+    height: 280px;
+  }
+  
+  
+  .our-history-details {
+    width: 280px;
+    height: 280px;
+  }
+  
+}
+
+@media (max-width: 330px) {
+  .our-history-card-section {
+    margin-left: 7%;
+    margin-right: 10%;
+  }
+
+  .our-history-card {
+    width: 250px;
+    height: 250px;
+  }
+
+  .our-history-card .our-history-image-container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .our-history-card .our-history-image-container img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  
+  .our-history-details {
+    width: 250px;
+    height: 250px;
+  }
+  
+}
+
+
+
+/*---------------about us our history section ends-----------*/
+
+
+
+/*-----------about us review section starts-----*/
+
+
+.about-review-secion{
+  background: url("https://livedemo00.template-help.com/wt_prod-19846/images/bg-cta-3.jpg");
+  min-height: 450px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.about-review-secion-heading {
+  color: #ffffff;
+  font-size: 38px;
+  font-family: "Abril Fatface", serif;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+
+.about-review-secion-content {
+  justify-content: center;
+  background-color: #ffffff;
+  width: 85%;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 0px #b2bcd1;
+}
+
+
+
+.about-review-secion-content img {
+  border: none;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+  padding: 10px;
+}
+
+.about-review-secion-content p {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+}
+
+.about-review-secion-content h3 {
+  text-align: center;
+}
+
+.about-review-secion-content-client {
+  text-align: center;
+  color: rgb(231, 173, 103);
+  padding-bottom: 20px;
+}
+
+
+@media (max-width: 486px) {
+  .about-review-secion-heading  {
+    font-size: 30px;
+  }
+
+  .about-review-secion-content img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .about-review-secion-content p {
+    margin-left: 7px;
+    margin-right: 7px;
+    font-size: 14px;
+  }
+
+  .about-review-secion-content h3 {
+    font-size: 18px;
+  }
+
+  .about-review-secion-content-client {
+    font-size: 16px;
+  }
+}
+
+/*-----------about us review section ends-----*/
+
+
+
+/*----------about us bottom section starts-----------*/
+
+.about-bottom-section {
+  background-color: #111;
+}
+
+.about-bottom-section-description {
+  color: whites;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+
+.about-bottom-section-description h3 {
+  font-family: "Abril Fatface", serif;
+  color: #ffffff;
+  font-size: 32px;
+  display: block;
+}
+
+
+.about-bottom-section-description p {
+  color: #ffffff;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: inherit;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+
+.about-bottom-section-icons {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.about-bottom-section-icons i {
+  color: #ffffff;
+  margin: 15px;
+  font-size: 22px;
+  padding-top: 15px;
+  transition: all o.6s;
+}
+
+
+.about-bottom-section-icons i:hover{
+  color: rgb(255, 174, 0);
+}
+
+.about-mail{
+  color: white;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+
+/*----------about us bottom section ends-----------*/
